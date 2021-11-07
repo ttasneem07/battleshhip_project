@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/squareClass.html -->
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="2021-fall : ">
+
+    <title>CSC116 Fall 2021</title>
+	
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="./Square.java_Implement_files/bootstrap.min.css">
+	
+
+	<!-- jQuery -->
+	<script async="" src="./Square.java_Implement_files/analytics.js"></script><script src="./Square.java_Implement_files/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="./Square.java_Implement_files/bootstrap.min.js"></script>
+	
+    <!-- Web Fonts (NCSU Branding) -->
+    <link href="./Square.java_Implement_files/include.css" rel="stylesheet" type="text/css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="https://brand.ncsu.edu/favicon.ico">
+	<!-- Custom Styles -->
+	<link rel="stylesheet" type="text/css" href="./Square.java_Implement_files/csc.css">
+	
+	<!-- NCSU Utility Bar -->
+	<script src="./Square.java_Implement_files/ub.php"></script><style type="text/css">html {
+  margin-top: 30px !important;
+}
+
+* html body {
+  margin-top: 30px !important;
+}
+
+#ncstate-utility-bar {
+  overflow: hidden;
+  *zoom: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 30px;
+  font-family: UniversRoman, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 99997 !important;
+  overflow: visible;
+}
+
+#ncstate-utility-bar html, #ncstate-utility-bar body, #ncstate-utility-bar div, #ncstate-utility-bar span, #ncstate-utility-bar applet, #ncstate-utility-bar object, #ncstate-utility-bar iframe,
+#ncstate-utility-bar h1, #ncstate-utility-bar h2, #ncstate-utility-bar h3, #ncstate-utility-bar h4, #ncstate-utility-bar h5, #ncstate-utility-bar h6, #ncstate-utility-bar p, #ncstate-utility-bar blockquote, #ncstate-utility-bar pre,
+#ncstate-utility-bar a, #ncstate-utility-bar abbr, #ncstate-utility-bar acronym, #ncstate-utility-bar address, #ncstate-utility-bar big, #ncstate-utility-bar cite, #ncstate-utility-bar code,
+#ncstate-utility-bar del, #ncstate-utility-bar dfn, #ncstate-utility-bar em, #ncstate-utility-bar img, #ncstate-utility-bar ins, #ncstate-utility-bar kbd, #ncstate-utility-bar q, #ncstate-utility-bar s, #ncstate-utility-bar samp,
+#ncstate-utility-bar small, #ncstate-utility-bar strike, #ncstate-utility-bar strong, #ncstate-utility-bar sub, #ncstate-utility-bar sup, #ncstate-utility-bar tt, #ncstate-utility-bar var,
+#ncstate-utility-bar b, #ncstate-utility-bar u, #ncstate-utility-bar i, #ncstate-utility-bar center,
+#ncstate-utility-bar dl, #ncstate-utility-bar dt, #ncstate-utility-bar dd, #ncstate-utility-bar ol, #ncstate-utility-bar ul, #ncstate-utility-bar li,
+#ncstate-utility-bar fieldset, #ncstate-utility-bar form, #ncstate-utility-bar label, #ncstate-utility-bar legend,
+#ncstate-utility-bar table, #ncstate-utility-bar caption, #ncstate-utility-bar tbody, #ncstate-utility-bar tfoot, #ncstate-utility-bar thead, #ncstate-utility-bar tr, #ncstate-utility-bar th, #ncstate-utility-bar td,
+#ncstate-utility-bar article, #ncstate-utility-bar aside, #ncstate-utility-bar canvas, #ncstate-utility-bar details, #ncstate-utility-bar embed,
+#ncstate-utility-bar figure, #ncstate-utility-bar figcaption, #ncstate-utility-bar footer, #ncstate-utility-bar header, #ncstate-utility-bar hgroup,
+#ncstate-utility-bar menu, #ncstate-utility-bar nav, #ncstate-utility-bar output, #ncstate-utility-bar ruby, #ncstate-utility-bar section, #ncstate-utility-bar summary,
+#ncstate-utility-bar time, #ncstate-utility-bar mark, #ncstate-utility-bar audio, #ncstate-utility-bar video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+#ncstate-utility-bar html {
+  line-height: 1;
+}
+
+#ncstate-utility-bar ol, #ncstate-utility-bar ul {
+  list-style: none;
+}
+
+#ncstate-utility-bar table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#ncstate-utility-bar caption, #ncstate-utility-bar th, #ncstate-utility-bar td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+#ncstate-utility-bar q, #ncstate-utility-bar blockquote {
+  quotes: none;
+}
+
+#ncstate-utility-bar q:before, #ncstate-utility-bar q:after, #ncstate-utility-bar blockquote:before, #ncstate-utility-bar blockquote:after {
+  content: "";
+  content: none;
+}
+
+#ncstate-utility-bar a img {
+  border: none;
+}
+
+#ncstate-utility-bar elements-of-type(html5-block) {
+  display: block;
+}
+
+#ncstate-utility-bar input,
+#ncstate-utility-bar button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#ncstate-utility-bar *, #ncstate-utility-bar *:before, #ncstate-utility-bar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#ncstate-utility-bar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#ncstate-utility-bar ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-tools {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 30px;
+  z-index: 99999;
+  background: #000;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-wrapper:before, #ncstate-utility-bar .ncstate-utility-bar-wrapper:after {
+  content: " ";
+  display: table;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-wrapper:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  #ncstate-utility-bar .ncstate-utility-bar-wrapper {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  #ncstate-utility-bar .ncstate-utility-bar-wrapper {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #ncstate-utility-bar .ncstate-utility-bar-wrapper {
+    width: 1170px;
+  }
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-wrapper-primary {
+  height: 30px;
+  position: relative;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links {
+  letter-spacing: 0.02em;
+  background: #333;
+  padding: 0 10px;
+  overflow: auto;
+  transition-property: all;
+  transition-duration: .5s;
+  transform: translate(0, 0);
+  z-index: 99998;
+  position: relative;
+  top: 30px;
+  display: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links.is-hidden {
+  transform: translate(0, -100%);
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li {
+  display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li a:hover {
+  text-decoration: underline;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li:before {
+  display: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li.ncstate-utility-bar-directory {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Cpath fill='%23fff' d='M71.857 81.672c12.941 0 23.435-12.537 23.435-28.002 0-15.467-10.493-28.003-23.435-28.003S48.423 38.203 48.423 53.67c0 15.465 10.493 28.002 23.434 28.002zm15.358 5.133c-4.588 2.769-9.812 4.346-15.357 4.346-5.674 0-11.018-1.644-15.683-4.535l-37.256 10.47v19.722h105.877V97.085l-37.581-10.28z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 20px;
+  background-size: 2em;
+  padding-left: 2.75em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li.ncstate-utility-bar-mypack {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Cpath fill='%23fff' d='M125.081 47.844V25.915h-47.04v9.752l6.844 12.177zM67.755 43.11H18.919v73.975h106.162V60.457H77.505z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 20px;
+  background-size: 2em;
+  padding-left: 2.75em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li.ncstate-utility-bar-map {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Cpath d='M90.821 85.199V67.552l-12.94 17.647z'/%3E%3Cpath fill='%23fff' d='M73.484 119.085s29.812-40.537 29.812-64.474c0-8.227-3.202-15.959-9.019-21.775-5.817-5.816-13.55-9.022-21.777-9.021-8.226-.001-15.96 3.203-21.775 9.021-5.817 5.816-9.021 13.549-9.021 21.775 0 27.2 29.811 64.474 29.811 64.474h1.969zM55.459 54.612c0-4.552 1.772-8.833 4.993-12.052A16.92 16.92 0 0172.5 37.566c4.553 0 8.832 1.771 12.05 4.992a16.94 16.94 0 014.991 12.051c0 4.554-1.772 8.833-4.993 12.053a16.919 16.919 0 01-12.049 4.994 16.919 16.919 0 01-12.049-4.991 16.922 16.922 0 01-4.991-12.053z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 20px;
+  background-size: 2em;
+  padding-left: 2.75em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li.ncstate-utility-bar-libraries {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 144 144'%3E%3Cpath d='M49.252 95.633h11.677v25.279H49.252z'/%3E%3Cpath d='M95.958 104.621H64.619v3.691H103.246a2.017 2.017 0 100-4.036h-1.038V89.83c.041.01.07.037.109.037 1.17 0 2.115-.936 2.115-2.088V26.613c0-1.152-.856-2.238-2.026-2.238-.891 0-.891 0-2.048.017h-48.81s-10.087-1.152-14.215 2.691c-4.127 3.844-3.515 11.757-3.515 11.757l.049 57.2c-.01.197-.059.385-.059.592 0 .203.048.398.059.6v.6l.05-.109c.564 5.924 5.506 10.592 11.572 10.592h.076v-3.691h-.076c-4.409 0-7.993-3.586-7.993-7.99 0-4.197 3.256-7.605 7.369-7.93h50.85l.243 15.917z'/%3E%3C/svg%3E");
+  background-position: left 20px;
+  background-repeat: no-repeat;
+  background-position: left 23px;
+  background-size: 2em;
+  padding-left: 2.75em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util {
+  padding: 1.5em 0;
+  padding-bottom: 0.5em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:last-child {
+  padding-top: 0;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:last-child dt {
+  display: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:nth-child(3) {
+  padding-bottom: 0;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl {
+  line-height: 1.6em;
+  padding: 1.5em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dt {
+  color: #ffffff;
+  padding-bottom: .5em;
+  text-transform: uppercase;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dt ul li:before {
+  display: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dt.ncstate-utility-bar-primary-util {
+  margin-bottom: 1.5em;
+  text-transform: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dd {
+  font-weight: lighter;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dd a {
+  color: #AAA;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dd a:hover {
+  text-decoration: underline;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-links dl dd ul li:before {
+  display: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-home {
+  float: left;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-home a {
+  display: block;
+  padding: 8px 14px 8px 28px;
+  line-height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Cpath fill='%23fff' d='M49.477 85.676l41.031 41.033 13.678-13.679-41.033-41.032 41.033-41.032L90.508 17.29 35.799 71.998z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1.2em;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-home a:hover {
+  background-color: #333;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-options {
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-covid {
+  float: left;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-covid a {
+  display: block;
+  text-align: center;
+  background-color: #900;
+  width: 80px;
+  height: 30px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  padding: 8px 13px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-covid a:hover {
+  background-color: #5e0000;
+}
+
+#ncstate-utility-bar .covid-text {
+  display: none;
+}
+
+@media screen and (min-width: 620px) {
+  #ncstate-utility-bar .ncstate-utility-bar-covid a {
+    width: 140px;
+  }
+  #ncstate-utility-bar .covid-text {
+    display: inline;
+  }
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-toggle {
+  float: left;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-toggle a {
+  display: block;
+  background-color: #c00;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Cpath fill='%23fff' d='M28.322 28.437V45.7h87.357V28.437H28.322zm0 87.127h87.357V98.302H28.322v17.262zm0-34.931h87.357V63.369H28.322v17.264z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-size: 1.78572em;
+  width: 120px;
+  height: 30px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  padding: 8px 13px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-toggle a:hover {
+  background-color: #5e0000;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-toggle a:hover + .indicator {
+  border-top: 8px solid #5e0000;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-toggle .indicator {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #c00;
+  margin: 0 auto -0.5em;
+  display: none;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search {
+  overflow: hidden;
+  *zoom: 1;
+  float: left;
+  background: #333;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-submit {
+  float: left;
+  color: #ffffff;
+  background-color: #333;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Cpath fill='%23fff' d='M125.409 112.381L93.296 80.269c4.181-6.493 6.431-14.051 6.43-21.955.001-10.864-4.23-21.079-11.914-28.76C80.13 21.87 69.917 17.64 59.052 17.64s-21.079 4.23-28.761 11.914c-7.683 7.681-11.914 17.896-11.913 28.76-.001 10.864 4.23 21.078 11.913 28.761 7.682 7.683 17.897 11.913 28.761 11.913 7.906 0 15.46-2.25 21.953-6.431l32.113 32.115 12.291-12.291zm-85.415-35.01C34.904 72.28 32.1 65.512 32.1 58.313c0-7.2 2.804-13.967 7.894-19.057 5.091-5.09 11.858-7.895 19.058-7.895 7.198 0 13.965 2.805 19.057 7.895 5.091 5.09 7.894 11.857 7.894 19.057 0 7.199-2.803 13.967-7.894 19.058-5.091 5.09-11.858 7.895-19.057 7.895-7.199 0-13.967-2.805-19.058-7.895z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.3em;
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  border-radius: 0px;
+  /* Make corners not round */
+  -webkit-appearance: none;
+  /* Make corners not round */
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-submit:hover {
+  cursor: pointer;
+  background-color: #1a1a1a;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field {
+  float: left;
+  border-radius: 0px;
+  /* Make corners not round */
+  -webkit-appearance: none;
+  /* Make corners not round */
+  background-color: #333;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  width: 150px;
+  padding: 6px;
+  text-align: center;
+  height: 30px;
+  box-sizing: border-box;
+  /* Make form hidden dropdown in mobile */
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:-moz-placeholder {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field::-moz-placeholder {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:-ms-input-placeholder {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:focus {
+  background-color: #1a1a1a;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:focus:-moz-placeholder {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:focus::-moz-placeholder {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#ncstate-utility-bar .ncstate-utility-bar-search-field:focus:-ms-input-placeholder {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+@media screen and (min-width: 528px) {
+  #ncstate-utility-bar .ncstate-utility-bar-links {
+    overflow: auto;
+    transition-duration: .4s;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links dl {
+    width: 50%;
+    display: inline-block;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links dl:nth-child(3) {
+    clear: both;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links dl dd, #ncstate-utility-bar .ncstate-utility-bar-links dl dt {
+    padding-right: 3%;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util {
+    padding-bottom: 1.5em;
+    width: 100%;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li {
+    width: 50%;
+    padding-right: 3%;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:last-child {
+    padding-top: 1.5em;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:last-child dt {
+    display: block;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:nth-child(3) {
+    padding-bottom: 1.5em;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-search-field {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #ncstate-utility-bar .ncstate-utility-bar-links {
+    transition-duration: .3s;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links dl {
+    width: 25%;
+    display: inline-block;
+    padding: 0 1.5em;
+    vertical-align: top;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links dl:nth-child(3) {
+    clear: none;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util {
+    padding-bottom: 0;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links ul.ncstate-utility-bar-primary-util li {
+    width: 25%;
+    padding-right: 3%;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util {
+    padding-bottom: 2em;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:last-child {
+    padding-top: 0;
+  }
+  #ncstate-utility-bar .ncstate-utility-bar-links .ncstate-utility-bar-sec-util dl:nth-child(3) {
+    padding-bottom: 0;
+  }
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-tools {
+  background: #333;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-links {
+  background: #1a1a1a;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-toggle a {
+  background-color: #c00;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-toggle a:hover {
+  background-color: #5e0000;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-toggle a:hover + .indicator {
+  border-top: 8px solid #5e0000;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-toggle .indicator {
+  border-top: 8px solid #c00;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-search {
+  background: #1a1a1a;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-search-submit {
+  background-color: #1a1a1a;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-search-submit:hover {
+  background-color: #2b2b2b;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-search-field {
+  background-color: #1a1a1a;
+}
+
+#ncstate-utility-bar.gray .ncstate-utility-bar-search-field:focus {
+  background-color: #2b2b2b;
+}
+
+#ncstate-utility-bar.gray:not(.show-brick) .ncstate-utility-bar-home a:hover {
+  background-color: #1a1a1a;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-tools {
+  background: #c00;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-links {
+  background: #900;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-links dl dd a {
+  color: #ccc;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-toggle a {
+  background-color: #333;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-toggle a:hover {
+  background-color: #1a1919;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-toggle a:hover + .indicator {
+  border-top: 8px solid #1a1919;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-toggle .indicator {
+  border-top: 8px solid #333;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-search {
+  background: #900;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-search-submit {
+  background-color: #900;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-search-submit:hover {
+  background-color: #bd0000;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-search-field {
+  background-color: #900;
+}
+
+#ncstate-utility-bar.red .ncstate-utility-bar-search-field:focus {
+  background-color: #bd0000;
+}
+
+#ncstate-utility-bar.red:not(.show-brick) .ncstate-utility-bar-home a:hover {
+  background-color: #900;
+}
+
+#ncstate-utility-bar.show-brick .ncstate-utility-bar-home a {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 34.493'%3E%3Cpath fill='%23c00' d='M71.998 34.493H0V0h71.998v34.494'/%3E%3Cpath fill='%23fff' d='M10.063 8.99h.027l2.819 7.55h2.844V6.212h-2.016v7.151h-.029l-2.744-7.15H8.046v10.325h2.017V8.99M21.035 15.167c-1.216 0-1.374-1.145-1.374-3.79 0-2.646.158-3.79 1.374-3.79.644 0 .885.517.885 1.888h2.117c.087-2.215-.8-3.432-3.002-3.432-3.56 0-3.56 2.603-3.56 5.334 0 2.702 0 5.332 3.56 5.332 2.016 0 3.118-.886 3.118-3.644h-2.131c-.03.815.014 2.102-.987 2.102M35.105 13.721c0-3.246-4.347-3.073-4.347-5.031 0-.716.417-1.103 1.116-1.103.872 0 1.001.787 1.001 1.56h2.102c.143-2.16-.902-3.104-3.002-3.104-2.633 0-3.404 1.287-3.404 2.903 0 3.077 4.346 3.188 4.346 5.049 0 .699-.356 1.172-1.085 1.172-1.189 0-1.23-.83-1.23-1.817h-2.16c-.114 1.788.386 3.36 3.06 3.36 1.643 0 3.603-.313 3.603-2.989M38.238 16.54h2.16V7.931h2.403V6.213h-6.965v1.719h2.402v8.607M45.302 12.665l.984-4.464h.028l1.044 4.464zm-.289-6.452L42.155 16.54h2.13l.586-2.288h2.947l.568 2.288h2.274L47.858 6.213h-2.845M54.553 16.54V7.931h2.405V6.213h-6.966v1.719h2.405v8.607h2.156M63.714 14.952H60.12v-3.015h3.204V10.35h-3.204V7.802h3.475V6.213H57.96V16.54h5.755v-1.587M12.233 25.147c0 1.1 0 2.668-1.72 2.668-1.719 0-1.719-1.568-1.719-2.668v-5.308h-.748v5.86c0 2.176 1.145 2.747 2.467 2.747 1.323 0 2.466-.571 2.466-2.747v-5.86h-.746v5.308M19.79 27.23l-.024.022-3.426-7.413h-1.147v8.44h.75v-7.466l.023-.024 3.438 7.49h1.132v-8.44h-.747v7.39M22.89 28.28h.748v-8.441h-.747v8.44M28.01 27.394h-.02l-2-7.555h-.797l2.351 8.44h.935l2.339-8.44h-.724l-2.084 7.555M33.086 24.26h2.94v-.632h-2.94V20.47h3.078v-.632H32.34v8.44h3.906v-.628h-3.16v-3.39M39.942 23.557h-1.215V20.47h1.53c.876 0 1.333.223 1.333 1.38 0 1.416-.524 1.706-1.648 1.706zm1.088.34v-.022c1.134-.26 1.31-.961 1.31-2.013 0-1.483-.408-2.023-2.035-2.023H37.98v8.44h.746V24.19h1.416c1.623 0 1.378 1.624 1.388 1.99.015.451.047 1.856.117 2.1h.714c-.022-.326-.08-.652-.08-.98 0-3.02-.071-3.158-1.252-3.403M46.646 23.594c-.96-.69-1.593-.725-1.593-1.977 0-.993.577-1.31 1.484-1.31 1.149 0 1.408.633 1.432 1.672h.756c0-1.215-.372-2.305-2.128-2.305-1.377 0-2.301.61-2.292 2.07.015.845.086 1.347 1.724 2.352 1.213.749 1.974 1.074 1.974 2.222 0 .971-.48 1.497-1.466 1.497-1.507 0-1.573-.973-1.573-1.908h-.774c-.07 1.65.667 2.54 2.314 2.54 1.475 0 2.244-.736 2.244-2.245 0-1.638-1.062-1.861-2.102-2.608M50.858 28.28h.749v-8.441h-.749v8.44M53.22 20.471h2.059v7.809h.75V20.47h2.057v-.632H53.22v.632M63.724 19.839l-2.025 4.199-1.93-4.2h-.844l2.388 4.937v3.505h.751v-3.505l2.406-4.936h-.746'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  color: transparent;
+  height: 60px;
+}
+
+#ncstate-utility-bar.show-brick .ncstate-utility-bar-home a:hover {
+  background-color: transparent;
+}
+
+#ncstate-utility-bar.show-brick ul.ncstate-utility-bar-primary-util {
+  padding-top: 30px;
+}
+</style>
+	
+	
+<style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+}</style></head>
+
+<body data-spy="scroll" data-target="#toc-sidebar" data-new-gr-c-s-check-loaded="14.1038.0" data-gr-ext-installed=""><div id="ncstate-utility-bar" class="ncstate-utility-bar gray show-brick" role="navigation" aria-label="NC State Brand Utility Bar"><div class="ncstate-utility-bar-tools"><div class="ncstate-utility-bar-wrapper ncstate-utility-bar-wrapper-primary" id="ncstate-utility-bar-wrapper-primary"><div class="ncstate-utility-bar-home"><a href="https://www.ncsu.edu/">NC State Home</a></div><div class="ncstate-utility-bar-options"><div class="ncstate-utility-bar-covid"><a href="https://ncsu.edu/coronavirus/">COVID-19<span class="covid-text"> Updates</span></a></div><div class="ncstate-utility-bar-toggle"><a id="ncstate-utility-bar-toggle-link" aria-label="Toggle resources" href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/squareClass.html#">Resources</a><div class="indicator"></div></div><div class="ncstate-utility-bar-search" role="search" aria-label="Search"><form action="https://www.ncsu.edu/search" name="navsearchform" class="ncstate-utility-bar-search-form"><input class="ncstate-utility-bar-search-field" id="search-input" name="q" type="search" placeholder="Search" aria-label="Search"> <input type="submit" id="search-submit" name="search-submit" value="search" class="ncstate-utility-bar-search-submit"></form></div></div></div></div><div class="ncstate-utility-bar-links is-hidden"><div class="ncstate-utility-bar-wrapper"><ul class="ncstate-utility-bar-primary-util"><li class="ncstate-utility-bar-primary-util ncstate-utility-bar-directory"><a href="https://projects.ncsu.edu/directory" id="ncstate-utility-bar-first-link">Campus Directory</a></li><li class="ncstate-utility-bar-primary-util ncstate-utility-bar-mypack"><a href="https://mypack.ncsu.edu/">MyPack Portal</a></li><li class="ncstate-utility-bar-primary-util ncstate-utility-bar-map"><a href="https://maps.ncsu.edu/">Campus Map</a></li><li class="ncstate-utility-bar-primary-util ncstate-utility-bar-libraries"><a href="https://www.lib.ncsu.edu/">Libraries</a></li></ul><div class="ncstate-utility-bar-sec-util"><dl><dt>Campus Resources</dt><dd><ul><li><a href="https://housing.ncsu.edu/">University Housing</a></li><li><a href="https://dining.ncsu.edu/">NC State Dining</a></li><li><a href="http://shop.bookstore.ncsu.edu/">Bookstores</a></li><li><a href="https://ncsu.transloc.com/">Wolfline Buses</a></li><li><a href="https://www.ncsu.edu/calendars">Calendar</a></li><li><a href="https://www.ncsu.edu/diversity/">Diversity</a></li></ul></dd></dl><dl><dt>Academic Resources</dt><dd><ul><li><a href="https://admissions.ncsu.edu/">Undergraduate Admissions</a></li><li><a href="https://www.ncsu.edu/academics/departments-a-z/">Academic Departments</a></li><li><a href="https://wolfware.ncsu.edu/">WolfWare/Moodle</a></li><li><a href="https://global.ncsu.edu/">Global Engagement</a></li><li><a href="https://online-distance.ncsu.edu/">Distance Education</a></li><li><a href="https://studentservices.ncsu.edu/calendars/academic/">Academic Calendar</a></li></ul></dd></dl><dl><dt>Other Resources</dt><dd><ul><li><a href="https://studentservices.ncsu.edu/">Student Services Center</a></li><li><a href="https://treasurer.ofb.ncsu.edu/cashier/">Cashier's Office</a></li><li><a href="https://registrar.ncsu.edu/">Registration and Records</a></li><li><a href="https://studentservices.ncsu.edu/your-money/financial-aid/">Scholarships and Financial Aid</a></li><li><a href="https://careers.dasa.ncsu.edu/">Career Development Center</a></li><li><a href="https://help.oit.ncsu.edu/">NC State Help Desk</a></li></ul></dd></dl><dl><dt>&nbsp;</dt><dd><ul><li><a href="https://ncsu.edu/coronavirus/">Coronavirus Updates</a></li><li><a href="https://campaign.ncsu.edu/">Giving</a></li><li><a href="https://news.ncsu.edu/">NC State News</a></li><li><a href="https://grad.ncsu.edu/">Graduate School</a></li><li><a href="https://mail.google.com/">Gmail Access</a></li><li><a href="https://social.ncsu.edu/">NC State Social Media</a></li></ul></dd></dl></div></div></div></div>
+    <a class="sr-only" href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/squareClass.html#main_content_wrap">Skip to main content</a>
+	<!-- Button to jump back to the top of the webpage -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script>
+
+	<div class="wrapper container">
+		<!-- HEADER -->
+				<!-- HEADER -->
+		<div id="ncstate-utility-bar"></div>
+		<div class="header-wrap">
+						
+			<div class="row">
+				<div id="header" class="header">
+					<h1 id="project_title">CSC116 Fall 2021</h1>
+					<p class="h2">Battleship - Square class
+</p>
+
+				</div>
+			</div>
+			<div id="toolbar" class="row hidden-print ">
+				<div id="toolbar-left" class="col-xs-10">
+				
+<ol class="breadcrumb">
+<li><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/">Home</a></li>
+
+
+
+
+
+    
+	
+	
+    
+		
+	
+	
+        
+        
+            <li>
+                
+                <a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/">Fall 2021 Project Index</a>
+            </li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+	
+	
+    
+		
+	
+	
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        
+            <li>
+                
+                <a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/">Project 5</a>
+            </li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+	
+	
+    
+		
+	
+	
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        
+            <li class="active">
+                
+                Battleship - Square class
+            </li>
+        
+    
+        
+    
+
+</ol>		
+				</div>
+				<div id="toolbar-right" class="col-xs-2">
+					<div class="print-button">
+						<a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/squareClass.html#" onclick="window.print();" alt="Print button"><img src="./Square.java_Implement_files/print.png" width="25px"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- MAIN CONTENT -->
+		<div id="main" class="row">
+			
+			<div id="mainContent" class="col-xs-12">
+			
+			
+			<div>
+				<h2 id="squarejava-implementation"><code class="language-plaintext highlighter-rouge">Square.java</code> Implementation</h2>
+<div id="iconHeader" style="position: relative;">
+
+
+
+
+
+
+<div class="icon" style="float:left; display:inline; position: absolute; left: -65px; top:  -40px; background-image: url(/engr-csc116-staff/2021-fall/assets/images/phases/CSC116_ImplementationIcon.png);" role="img" aria-label="Implementation Icon"></div>
+
+
+</div>
+
+<div class="popover right" style="display:block;margin:20px;position:relative;float:right;"><div class="arrow" style="top: 25% !important;"></div><div class="popover-title">Square UML</div><div class="popover-content">
+<p><img src="./Square.java_Implement_files/Square.png" alt="Square Class UML"></p>
+</div></div>
+
+<p><strong><u>(Do not begin this class until you have completed and tested the Ship class!)</u></strong></p>
+
+<p>The  Square class represents a location in a Battleship board.</p>
+
+<p>The following are the instance variables (fields) and the methods
+of the Square class. Complete each item in the following order.</p>
+
+<h3 id="instance-variable-fields">Instance Variable (Fields)</h3>
+
+<p>Declare the following <code class="language-plaintext highlighter-rouge">private</code> instance variables (fields) (see UML for naming):</p>
+
+<ul>
+  <li>A boolean that is true if the <code class="language-plaintext highlighter-rouge">Square</code> has been hit by enemy fire, false otherwise.</li>
+  <li>A <code class="language-plaintext highlighter-rouge">Ship</code> located in the <code class="language-plaintext highlighter-rouge">Square</code> (if there is a <code class="language-plaintext highlighter-rouge">Ship</code>). 
+NOTE that because a <code class="language-plaintext highlighter-rouge">Ship</code> occupies several <code class="language-plaintext highlighter-rouge">Square</code>s, other <code class="language-plaintext highlighter-rouge">Square</code>s will contain a reference
+to the same <code class="language-plaintext highlighter-rouge">Ship</code> object.</li>
+</ul>
+
+<h3 id="methods">Methods</h3>
+
+<p>The following is the list of constructors and methods you must complete.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">public Square()</code>: This is the constructor of the Square class. It must set the instance variable keeping 
+track of whether the square has been hit to false and set the reference to a Ship to null.</li>
+  <li><code class="language-plaintext highlighter-rouge">public boolean hasBeenHit()</code>: Returns true if the Square has been hit by enemy fire, false otherwise.</li>
+  <li><code class="language-plaintext highlighter-rouge">public void addShip(Ship ship)</code>: Add the given Ship to the Square.</li>
+  <li><code class="language-plaintext highlighter-rouge">public boolean hasShip()</code>: Returns true if the Square contains a Ship.</li>
+  <li><code class="language-plaintext highlighter-rouge">public Ship getShip()</code>: Returns the reference to the Ship located in this Square or null if 
+the Square does not contain a Ship.</li>
+  <li><code class="language-plaintext highlighter-rouge">public void fireAt()</code>: The Square should update the fact 
+that it has been hit.  If a Ship is occupying the square, it should also call the Ship’s hit() method 
+to let it know that it has been hit.
+    <ul>
+      <li>Throw an <code class="language-plaintext highlighter-rouge">IllegalStateException</code> with the message, “Already hit”, if the Square has already been hit</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">public boolean equals(Object o)</code>: 
+ This method returns true if and only if the 
+ Object o is a Square <strong><em>AND</em></strong> both Squares have been hit or neither has been hit 
+ and if both Squares either contain a reference to 
+ the same Ship or do not contain a Ship.
+ Otherwise, it returns false.</li>
+  <li><code class="language-plaintext highlighter-rouge">public String toString()</code>: Returns a string indicating 
+the state of the square.  The string will be one of the following:
+    <ul>
+      <li>”-“ (if the square does not contain a ship and
+has not been hit)</li>
+      <li>“W” (if the square has been hit and does not contain a ship; W stands for White)</li>
+      <li>“R” (if the square has been hit and contains a ship; R stands for Red)</li>
+      <li>If the square contains a ship and has not been hit, a string containing 
+   the length of the ship must be returned, for example, “1”, “2”, “3”, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="unit-testing">Unit Testing</h3>
+<div id="iconHeader" style="position: relative;">
+
+
+
+
+
+
+<div class="icon" style="float:left; display:inline; position: absolute; left: -65px; top:  -40px; background-image: url(/engr-csc116-staff/2021-fall/assets/images/phases/CSC116_UnitTestIcon.png);" role="img" aria-label="Unittest Icon"></div>
+
+
+</div>
+
+<p>Unit-test your Square class by completing the provided SquareTest program, <a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/assets/SquareTest.java">SquareTest.java</a>, based on given <code class="language-plaintext highlighter-rouge">TODO</code> statements. 
+Do this <strong><em>before</em></strong> implementing the Board class.</p>
+
+
+			</div>
+			<ul class="pager">
+
+
+
+
+
+
+
+
+
+
+<!-- Create the previous page arrow -->
+
+    
+    
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+         
+            
+        
+    
+        
+      
+         
+            
+        
+    
+        
+      
+         
+            
+        
+    
+        
+      
+         
+            
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+         
+            
+        
+    
+        
+      
+         
+            
+                
+                
+                
+    <li class="previous"><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/shipClass.html"><span class="glyphicon glyphicon-bold-arrow-left" data-alt="return to the previous page"></span>Previous: Battleship - Ship class
+</a></li>
+
+
+<!-- Create the next page arrow -->
+
+
+    
+    
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+        
+    
+        
+      
+         
+            
+        
+    
+        
+      
+         
+            
+                
+                
+                
+    <li class="next"><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/projects/project5/boardClass.html">Next: Battleship - Board class
+<span class="glyphicon glyphicon-bold-arrow-right" data-alt="go to the next page"></span></a></li>
+
+</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- FOOTER  -->
+			<div class="container-fluid">
+			<div class="row hidden-print">
+				<div id="footer_wrap" class="outer">
+					<footer class="footer_inner">
+						<p>© <a href="mailto:spbalik@ncsu.edu">Dr. Suzanne Balik</a> and NC State University Computer Science Faculty. All rights reserved.
+						</p>
+						
+						<p><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/privacy">Privacy Policy</a></p><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/privacy">
+						
+					</a></footer><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/privacy">
+				</a></div><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/privacy">
+			</a></div><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/privacy">
+		</a></div><a href="https://pages.github.ncsu.edu/engr-csc116-staff/2021-fall/privacy">
+	
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-100207387-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+
+
+
+</a></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
