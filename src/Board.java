@@ -1,9 +1,3 @@
-package src;
-
-import javax.lang.model.util.ElementScanner6;
-
-import org.hamcrest.core.IsSame;
-
 public class Board {
     private int numberOfRows;
     private int numberOfColumns;

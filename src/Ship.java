@@ -1,5 +1,3 @@
-package src;
-
 public class Ship {
     private int length;
     private int hits;

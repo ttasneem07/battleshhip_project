@@ -1,5 +1,3 @@
-package src;
-
 public class Square {
     private boolean hasBeenHit;
     private Ship ship;
